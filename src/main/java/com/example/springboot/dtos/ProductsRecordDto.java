@@ -1,4 +1,9 @@
 package com.example.springboot.dtos;
 
-public record ProductsRecordDto() {
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+import java.math.BigDecimal;
+
+public record ProductsRecordDto(@NotBlank String name, @NotNull BigDecimal costValue, @NotNull int active) {
 }
